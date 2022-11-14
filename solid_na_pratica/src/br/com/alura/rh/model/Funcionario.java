@@ -14,13 +14,11 @@ public class Funcionario {
     private BigDecimal salario;
     private LocalDate dataUltimoReajuste;
 
-    public Funcionario(String nome, String cpf, Cargo cargo, BigDecimal salario) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.cargo = cargo;
-        this.salario = salario;
-    }
+    private DadosPessoais dadosPessoais;
 
+    public Funcionario(String nome, String cpf, Cargo cargo, BigDecimal salario) {
+        this.dadosPessoais = new DadosPessoais(nome.toUpperCase(),cpf,cargo,salario);
+    }
 
     public String getNome() {
         return nome;
