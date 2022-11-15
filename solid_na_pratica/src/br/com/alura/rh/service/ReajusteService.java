@@ -9,14 +9,15 @@ public class ReajusteService {
 
     private List<ValidacaoReajuste> validacoes;
 
-    public ReajusteService(List<ValidacaoReajuste> validacoes){
+    public ReajusteService(List<ValidacaoReajuste> validacoes) {
         this.validacoes = validacoes;
     }
-/* esse metódo se encontrava na classe funcionario, apesar de ter a ver com o funcionario
- esse é um serviço de cálculo, uma regra de negócio e deve estar numa classe separada em um service, por exemplo
- */
+
+    /* esse metódo se encontrava na classe funcionario, apesar de ter a ver com o funcionario
+     esse é um serviço de cálculo, uma regra de negócio e deve estar numa classe separada em um service, por exemplo
+     */
     public void reajustarSalario(Funcionario funcionario, BigDecimal aumento) {
-    this.validacoes.forEach(v -> v.validar(funcionario,aumento));
+        this.validacoes.forEach(v -> v.validar(funcionario, aumento));
 
         BigDecimal novoSalario = funcionario.getSalario().add(aumento);
         funcionario.atualizarSalario(novoSalario);
