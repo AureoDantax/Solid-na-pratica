@@ -13,7 +13,7 @@ public class PromocaoService {
         if (metaBatida) {
             Cargo novoCargo = cargoAtual.getProximoCargo();
             funcionario.promove(novoCargo);
-        }else {
+        } else {
             throw new ValidacaoException("a meta não foi batida");
 
         }
