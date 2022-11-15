@@ -7,5 +7,5 @@ import java.math.BigDecimal;
 public interface ValidacaoReajuste {
 
 
-    public void Validar (Funcionario funcionario, BigDecimal aumento);
+    public void validar (Funcionario funcionario, BigDecimal aumento);
 }
