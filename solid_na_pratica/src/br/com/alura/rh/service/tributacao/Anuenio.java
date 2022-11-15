@@ -14,13 +14,14 @@ public class Anuenio implements Reajuste {
     }
 
     @Override
-    public BigDecimal valor() {return valor;}
-
-    @Override
-    public LocalDate data() {return data;}
-
-    @Override
-    public BigDecimal valorImpostoRenda() {
-        return null;
+    public BigDecimal valor() {
+        return valor;
     }
+
+    @Override
+    public LocalDate data() {
+        return data;
+    }
+
+
 }
