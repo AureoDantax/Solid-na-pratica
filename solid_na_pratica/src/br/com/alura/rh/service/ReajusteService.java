@@ -16,7 +16,7 @@ public class ReajusteService {
  esse é um serviço de cálculo, uma regra de negócio e deve estar numa classe separada em um service, por exemplo
  */
     public void reajustarSalario(Funcionario funcionario, BigDecimal aumento) {
-    this.validacoes.forEach(v -> v.Validar(funcionario,aumento));
+    this.validacoes.forEach(v -> v.validar(funcionario,aumento));
 
         BigDecimal novoSalario = funcionario.getSalario().add(aumento);
         funcionario.atualizarSalario(novoSalario);
